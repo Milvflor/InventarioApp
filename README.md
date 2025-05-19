@@ -55,7 +55,7 @@ cd InventarioApp
 ```
 
 ### 2. Backend
-0. En la raiz del proyecto, crear un archivo de nombre appsettings.json con el siguiente formato:
+0. En en path **../InventarioApp/PoolApi/**, crear un archivo de nombre **appsettings.json** con el siguiente formato:
    ```bash
       {
         "ConnectionStrings": {
