@@ -104,7 +104,7 @@ cd InventarioApp
    ```
 
 ### 3. Frontend
-1. Ejecute 
+1. En el path ".../InventarioApi/PoolApp/", ejecute:
     ```bash
        // Para instalar librerias
        npm install
