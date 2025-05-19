@@ -3,6 +3,7 @@
 Este proyecto es una aplicación fullstack para gestionar productos y lotes de inventario. El backend está desarrollado con **ASP.NET Core** y el frontend con **React**.
 
 ## Estructura del proyecto
+```
 PoolApi (Backend)
 ├───Config
 ├───Controllers
@@ -31,7 +32,7 @@ PoolApp (FrontEnd)
         ├───routes
         ├───services
         └───utils ...
-
+```
 
 ---
 
