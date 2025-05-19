@@ -11,6 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 
 
@@ -26,6 +27,7 @@ public class LotesController : ControllerBase
         _context = context; _config = config;
     }
 
+    [Authorize]
     [HttpGet("all")]
     public async Task<IActionResult> getAllLotes()
     {
@@ -46,6 +48,7 @@ public class LotesController : ControllerBase
         return Ok(lotes);
     }
 
+    [Authorize]
     [HttpPost("registerLote")]
     public async Task<IActionResult> RegisterLote([FromBody] RegisterLoteDto dto)
     {
@@ -101,6 +104,7 @@ public class LotesController : ControllerBase
 
     }
 
+    [Authorize]
     [HttpGet("precios")]
     public async Task<IActionResult> GetPreciosPorProductoYFecha([FromQuery] int productId, [FromQuery] DateTime fecha)
     {
@@ -117,7 +121,7 @@ public class LotesController : ControllerBase
         return Ok(precios);
     }
 
-
+    [Authorize]
     [HttpGet("precios-por-fecha")]
     public async Task<IActionResult> GetPreciosPorFecha([FromQuery] DateTime fecha)
     {

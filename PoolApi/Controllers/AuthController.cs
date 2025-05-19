@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-
 [ApiController]
 [Route("api/auth")]
 public class AuthController : ControllerBase

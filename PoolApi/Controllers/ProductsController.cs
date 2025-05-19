@@ -11,6 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 
 
@@ -26,6 +27,7 @@ public class ProductsController : ControllerBase
         _context = context; _config = config;
     }
 
+    [Authorize]
     [HttpGet("all")]
     public async Task<IActionResult> getAllProducts()
     {
@@ -39,6 +41,7 @@ public class ProductsController : ControllerBase
         return Ok(productos);
     }
 
+    [Authorize]
     [HttpPost("registerProduct")]
     public async Task<IActionResult> RegisterProduct([FromBody] RegisterProductDto dto)
     {

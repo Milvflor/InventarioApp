@@ -27,7 +27,8 @@ const createProduct = async (productData) => {
   try {
     const response = await axios.post(`${API_URL}/products/registerProduct`, {
         name: productData.nombre,
-        description: productData.descripcion
+        description: productData.descripcion,
+        
     }, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
