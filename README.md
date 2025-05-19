@@ -98,9 +98,16 @@ cd InventarioApp
       // Para construir la App de backend
       dotnet build
 
-      // Para ejecutar el servidor
+      // Para ejecutar el servidor (Developer)
       dotnet run
-   
+
+      // Para ejecutar el servidor (Production)
+      $env:ASPNETCORE_ENVIRONMENT = "Production"
+      dotnet publish -c Release
+      dotnet .\bin\Release\net8.0\publish\PoolApi.dll
+      //Opcional
+      export ASPNETCORE_URLS=http://localhost:5000
+
    ```
 
 ### 3. Frontend
